@@ -7,7 +7,7 @@ require('dotenv').config()
 
 let db,
     dbConnectionStr = process.env.DB_STRING,
-    dbName = 'rap'
+    dbName = 'life-hacks-project'
 
 MongoClient.connect(dbConnectionStr, { useUnifiedTopology: true })
     .then(client => {
@@ -30,8 +30,7 @@ app.get('/',(request, response)=>{
 })
 
 app.post('/addRapper', (request, response) => {
-    db.collection('rappers').insertOne({stageName: request.body.stageName,
-    birthName: request.body.birthName, likes: 0})
+    db.collection('rappers').insertOne({stageName: request.body.stageName, likes: 0})
     .then(result => {
         console.log('Rapper Added')
         response.redirect('/')
@@ -40,7 +39,7 @@ app.post('/addRapper', (request, response) => {
 })
 
 app.put('/addOneLike', (request, response) => {
-    db.collection('rappers').updateOne({stageName: request.body.stageNameS, birthName: request.body.birthNameS,likes: request.body.likesS},{
+    db.collection('rappers').updateOne({stageName: request.body.stageNameS,likes: request.body.likesS},{
         $set: {
             likes:request.body.likesS + 1
           }
