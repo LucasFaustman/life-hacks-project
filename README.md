@@ -36,3 +36,7 @@ myPlayer.io: https://github.com/LucasFaustman/nba-Stat-Project
 Local Freelance Makeup Artist: https://github.com/LucasFaustman/local-makeup-artist-website
 
 Formula 1 API: https://github.com/LucasFaustman/formulaone-api/blob/main/README.md
+
+My Small CRM : https://github.com/LucasFaustman/my-small-crm/tree/main
+
+Vancouver StarGazers Society APOD Web App with NASA API integration: https://github.com/LucasFaustman/vancouver-stargazers
